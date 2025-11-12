@@ -34,9 +34,9 @@ const Dashboard = () => {
   const fetchSalesData = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch("https://asia-south1.workflow.boltic.app/29cc9b3d-d530-4b65-ace7-49b489fc36af");
+      const response = await fetch("https://asia-south1.workflow.boltic.app/b531bc6e-11c5-4cf3-a910-443f37ef9e42");
       const data = await response.json();
-      setSalesData(data.result.data || []);
+      setSalesData(data.data || []);
     } catch (error) {
       toast({
         title: "Error",

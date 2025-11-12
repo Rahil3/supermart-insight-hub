@@ -6,7 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useToast } from "@/hooks/use-toast";
-import logoImage from "@/assets/super-indo-logo.png";
+import logoImage from "@/assets/super-indo-logo.svg";
 
 const Auth = () => {
   const navigate = useNavigate();
@@ -30,8 +30,8 @@ const Auth = () => {
     setIsLoading(true);
 
     try {
-      // API call for login - replace with actual endpoint
-      const response = await fetch("https://asia-south1.workflow.boltic.app/auth", {
+      // API call for login
+      const response = await fetch("https://asia-south1.workflow.boltic.app/04d62024-bbeb-4870-87da-e43602a5fa68/users", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -83,14 +83,13 @@ const Auth = () => {
     setIsLoading(true);
 
     try {
-      // API call for registration - replace with actual endpoint
-      const response = await fetch("https://asia-south1.workflow.boltic.app/register", {
+      // API call for registration
+      const response = await fetch("https://asia-south1.workflow.boltic.app/93875a21-475e-41e0-b903-546544781bba/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          name: signupData.name,
           email: signupData.email,
           password: signupData.password,
         }),
